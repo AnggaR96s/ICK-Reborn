@@ -4,11 +4,8 @@ DTBTOOL=$KERNEL_DIR/dtbTool
 DATE=$(date +"%d%m%Y")
 KERNEL_NAME="IceColdKernel"
 DEVICE="-kenzo-"
-FINAL_ZIP="$KERNEL_NAME""$DEVICE""$DATE".zip
-
-if [ -f "$FINAL_ZIP" ]; then
-   rm -f $FINAL_ZIP
-fi
+VER="-v0.6"
+FINAL_ZIP="$KERNEL_NAME""$DEVICE""$DATE""$VER".zip
 
 export ARCH=arm64
 export KBUILD_BUILD_USER="Stark"
